@@ -75,3 +75,18 @@ class Card:
     def __hash__(self) -> int:
         """Hash function for using cards in sets/dicts."""
         return hash((self.suit, self.rank))
+    
+    def count_value(self, system) -> int:
+        """Get the card's value for a specific counting system.
+        
+        Args:
+            system: The counting system to use
+            
+        Returns:
+            The card's value in the specified counting system
+        """
+        # This will be implemented when counting systems are available
+        # For now, return 0 as a placeholder
+        if hasattr(system, 'card_value'):
+            return system.card_value(self)
+        return 0
