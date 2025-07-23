@@ -85,8 +85,6 @@ class Card:
         Returns:
             The card's value in the specified counting system
         """
-        # This will be implemented when counting systems are available
-        # For now, return 0 as a placeholder
         if hasattr(system, 'card_value'):
             return system.card_value(self)
         return 0
