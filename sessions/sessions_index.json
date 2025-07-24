@@ -1,0 +1,20 @@
+{
+  "0b3196ac-8703-4eed-a91e-9ebcaa8170ae": {
+    "session_id": "0b3196ac-8703-4eed-a91e-9ebcaa8170ae",
+    "name": "Counting Session 2025-07-24 15:28",
+    "created_time": "2025-07-24T15:28:19.307115",
+    "last_modified": "2025-07-24T17:20:18.492637",
+    "hands_played": 18,
+    "duration_minutes": 111.98642536666667,
+    "rules_summary": "6 decks, 75% penetration, H17, DAS"
+  },
+  "ccf621fb-97c4-481d-bab6-aaa571a85021": {
+    "session_id": "ccf621fb-97c4-481d-bab6-aaa571a85021",
+    "name": "Blackjack Session 2025-07-24 17:28",
+    "created_time": "2025-07-24T17:28:27.560402",
+    "last_modified": "2025-07-24T17:30:31.947158",
+    "hands_played": 18,
+    "duration_minutes": 2.0731126,
+    "rules_summary": "6 decks, 75% penetration, H17, DAS"
+  }
+}

@@ -1,0 +1,1034 @@
+{
+  "session_id": "ccf621fb-97c4-481d-bab6-aaa571a85021",
+  "metadata": {
+    "session_id": "ccf621fb-97c4-481d-bab6-aaa571a85021",
+    "name": "Blackjack Session 2025-07-24 17:28",
+    "created_time": "2025-07-24T17:28:27.560402",
+    "last_modified": "2025-07-24T17:30:31.947158",
+    "hands_played": 18,
+    "duration_minutes": 2.0731126,
+    "rules_summary": "6 decks, 75% penetration, H17, DAS"
+  },
+  "rules": {
+    "dealer_hits_soft_17": true,
+    "double_after_split": true,
+    "surrender_allowed": false,
+    "num_decks": 6,
+    "penetration": 0.75,
+    "blackjack_payout": 1.5
+  },
+  "stats": {
+    "session_id": "ccf621fb-97c4-481d-bab6-aaa571a85021",
+    "start_time": "2025-07-24T17:28:27.560402",
+    "end_time": null,
+    "hands_played": 18,
+    "hands_won": 8,
+    "hands_lost": 10,
+    "hands_pushed": 0,
+    "blackjacks": 1,
+    "surrenders": 0,
+    "total_bet": 18.0,
+    "total_winnings": 9.5,
+    "net_result": -1.5,
+    "counting_accuracy": {
+      "total_estimates": 0,
+      "correct_estimates": 0,
+      "total_error": 0.0,
+      "max_error": 0.0
+    },
+    "strategy_accuracy": {
+      "total_decisions": 0,
+      "correct_decisions": 0,
+      "basic_strategy_decisions": 0,
+      "deviation_decisions": 0,
+      "correct_deviations": 0
+    },
+    "results_history": [
+      {
+        "outcome": "win",
+        "player_total": 13,
+        "dealer_total": 24,
+        "payout": 1.0,
+        "player_busted": false,
+        "dealer_busted": true,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      {
+        "outcome": "win",
+        "player_total": 21,
+        "dealer_total": 18,
+        "payout": 1.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      {
+        "outcome": "loss",
+        "player_total": 17,
+        "dealer_total": 21,
+        "payout": -1.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      {
+        "outcome": "loss",
+        "player_total": 23,
+        "dealer_total": 18,
+        "payout": -1.0,
+        "player_busted": true,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      {
+        "outcome": "loss",
+        "player_total": 18,
+        "dealer_total": 21,
+        "payout": -2.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      {
+        "outcome": "loss",
+        "player_total": 24,
+        "dealer_total": 11,
+        "payout": -1.0,
+        "player_busted": true,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      {
+        "outcome": "loss",
+        "player_total": 17,
+        "dealer_total": 18,
+        "payout": -1.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      {
+        "outcome": "win",
+        "player_total": 13,
+        "dealer_total": 25,
+        "payout": 1.0,
+        "player_busted": false,
+        "dealer_busted": true,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      {
+        "outcome": "loss",
+        "player_total": 18,
+        "dealer_total": 20,
+        "payout": -1.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      {
+        "outcome": "win",
+        "player_total": 21,
+        "dealer_total": 18,
+        "payout": 2.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      {
+        "outcome": "loss",
+        "player_total": 22,
+        "dealer_total": 20,
+        "payout": -1.0,
+        "player_busted": true,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      {
+        "outcome": "win",
+        "player_total": 17,
+        "dealer_total": 25,
+        "payout": 1.0,
+        "player_busted": false,
+        "dealer_busted": true,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      {
+        "outcome": "loss",
+        "player_total": 17,
+        "dealer_total": 21,
+        "payout": -1.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": true
+      },
+      {
+        "outcome": "loss",
+        "player_total": 17,
+        "dealer_total": 18,
+        "payout": -1.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      {
+        "outcome": "win",
+        "player_total": 20,
+        "dealer_total": 18,
+        "payout": 1.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      {
+        "outcome": "loss",
+        "player_total": 25,
+        "dealer_total": 16,
+        "payout": -1.0,
+        "player_busted": true,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      {
+        "outcome": "win",
+        "player_total": 20,
+        "dealer_total": 18,
+        "payout": 1.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      {
+        "outcome": "blackjack",
+        "player_total": 21,
+        "dealer_total": 13,
+        "payout": 1.5,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": true,
+        "dealer_blackjack": false
+      }
+    ]
+  },
+  "hands_history": [
+    {
+      "hand_number": 1,
+      "player_cards": [
+        {
+          "suit": "♣",
+          "rank": "Q"
+        },
+        {
+          "suit": "♣",
+          "rank": "3"
+        }
+      ],
+      "dealer_cards": [
+        {
+          "suit": "♦",
+          "rank": "4"
+        },
+        {
+          "suit": "♠",
+          "rank": "J"
+        },
+        {
+          "suit": "♦",
+          "rank": "A"
+        },
+        {
+          "suit": "♦",
+          "rank": "9"
+        }
+      ],
+      "user_actions": [],
+      "optimal_actions": [],
+      "running_count": 0,
+      "true_count": 0.0,
+      "result": {
+        "outcome": "win",
+        "player_total": 13,
+        "dealer_total": 24,
+        "payout": 1.0,
+        "player_busted": false,
+        "dealer_busted": true,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      "bet_amount": 1.0,
+      "timestamp": "2025-07-24T17:28:43.887369"
+    },
+    {
+      "hand_number": 2,
+      "player_cards": [
+        {
+          "suit": "♦",
+          "rank": "5"
+        },
+        {
+          "suit": "♦",
+          "rank": "8"
+        },
+        {
+          "suit": "♣",
+          "rank": "8"
+        }
+      ],
+      "dealer_cards": [
+        {
+          "suit": "♦",
+          "rank": "9"
+        },
+        {
+          "suit": "♥",
+          "rank": "2"
+        },
+        {
+          "suit": "♦",
+          "rank": "7"
+        }
+      ],
+      "user_actions": [],
+      "optimal_actions": [],
+      "running_count": 0,
+      "true_count": 0.0,
+      "result": {
+        "outcome": "win",
+        "player_total": 21,
+        "dealer_total": 18,
+        "payout": 1.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      "bet_amount": 1.0,
+      "timestamp": "2025-07-24T17:28:48.512423"
+    },
+    {
+      "hand_number": 3,
+      "player_cards": [
+        {
+          "suit": "♠",
+          "rank": "10"
+        },
+        {
+          "suit": "♣",
+          "rank": "7"
+        }
+      ],
+      "dealer_cards": [
+        {
+          "suit": "♦",
+          "rank": "4"
+        },
+        {
+          "suit": "♣",
+          "rank": "J"
+        },
+        {
+          "suit": "♣",
+          "rank": "7"
+        }
+      ],
+      "user_actions": [],
+      "optimal_actions": [],
+      "running_count": 0,
+      "true_count": 0.0,
+      "result": {
+        "outcome": "loss",
+        "player_total": 17,
+        "dealer_total": 21,
+        "payout": -1.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      "bet_amount": 1.0,
+      "timestamp": "2025-07-24T17:28:51.142377"
+    },
+    {
+      "hand_number": 4,
+      "player_cards": [
+        {
+          "suit": "♠",
+          "rank": "J"
+        },
+        {
+          "suit": "♥",
+          "rank": "3"
+        },
+        {
+          "suit": "♠",
+          "rank": "Q"
+        }
+      ],
+      "dealer_cards": [
+        {
+          "suit": "♠",
+          "rank": "8"
+        },
+        {
+          "suit": "♠",
+          "rank": "10"
+        }
+      ],
+      "user_actions": [],
+      "optimal_actions": [],
+      "running_count": 0,
+      "true_count": 0.0,
+      "result": {
+        "outcome": "loss",
+        "player_total": 23,
+        "dealer_total": 18,
+        "payout": -1.0,
+        "player_busted": true,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      "bet_amount": 1.0,
+      "timestamp": "2025-07-24T17:28:54.406401"
+    },
+    {
+      "hand_number": 5,
+      "player_cards": [
+        {
+          "suit": "♠",
+          "rank": "6"
+        },
+        {
+          "suit": "♥",
+          "rank": "5"
+        },
+        {
+          "suit": "♦",
+          "rank": "7"
+        }
+      ],
+      "dealer_cards": [
+        {
+          "suit": "♠",
+          "rank": "10"
+        },
+        {
+          "suit": "♥",
+          "rank": "4"
+        },
+        {
+          "suit": "♣",
+          "rank": "2"
+        },
+        {
+          "suit": "♠",
+          "rank": "5"
+        }
+      ],
+      "user_actions": [],
+      "optimal_actions": [],
+      "running_count": 0,
+      "true_count": 0.0,
+      "result": {
+        "outcome": "loss",
+        "player_total": 18,
+        "dealer_total": 21,
+        "payout": -2.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      "bet_amount": 1.0,
+      "timestamp": "2025-07-24T17:29:02.479370"
+    },
+    {
+      "hand_number": 6,
+      "player_cards": [
+        {
+          "suit": "♠",
+          "rank": "5"
+        },
+        {
+          "suit": "♣",
+          "rank": "7"
+        },
+        {
+          "suit": "♥",
+          "rank": "3"
+        },
+        {
+          "suit": "♣",
+          "rank": "9"
+        }
+      ],
+      "dealer_cards": [
+        {
+          "suit": "♥",
+          "rank": "7"
+        },
+        {
+          "suit": "♦",
+          "rank": "4"
+        }
+      ],
+      "user_actions": [],
+      "optimal_actions": [],
+      "running_count": 0,
+      "true_count": 0.0,
+      "result": {
+        "outcome": "loss",
+        "player_total": 24,
+        "dealer_total": 11,
+        "payout": -1.0,
+        "player_busted": true,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      "bet_amount": 1.0,
+      "timestamp": "2025-07-24T17:29:47.815508"
+    },
+    {
+      "hand_number": 7,
+      "player_cards": [
+        {
+          "suit": "♦",
+          "rank": "10"
+        },
+        {
+          "suit": "♥",
+          "rank": "7"
+        }
+      ],
+      "dealer_cards": [
+        {
+          "suit": "♥",
+          "rank": "5"
+        },
+        {
+          "suit": "♥",
+          "rank": "3"
+        },
+        {
+          "suit": "♥",
+          "rank": "K"
+        }
+      ],
+      "user_actions": [],
+      "optimal_actions": [],
+      "running_count": 0,
+      "true_count": 0.0,
+      "result": {
+        "outcome": "loss",
+        "player_total": 17,
+        "dealer_total": 18,
+        "payout": -1.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      "bet_amount": 1.0,
+      "timestamp": "2025-07-24T17:29:49.680041"
+    },
+    {
+      "hand_number": 8,
+      "player_cards": [
+        {
+          "suit": "♥",
+          "rank": "K"
+        },
+        {
+          "suit": "♣",
+          "rank": "3"
+        }
+      ],
+      "dealer_cards": [
+        {
+          "suit": "♥",
+          "rank": "5"
+        },
+        {
+          "suit": "♥",
+          "rank": "2"
+        },
+        {
+          "suit": "♠",
+          "rank": "8"
+        },
+        {
+          "suit": "♠",
+          "rank": "10"
+        }
+      ],
+      "user_actions": [],
+      "optimal_actions": [],
+      "running_count": 0,
+      "true_count": 0.0,
+      "result": {
+        "outcome": "win",
+        "player_total": 13,
+        "dealer_total": 25,
+        "payout": 1.0,
+        "player_busted": false,
+        "dealer_busted": true,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      "bet_amount": 1.0,
+      "timestamp": "2025-07-24T17:29:52.250338"
+    },
+    {
+      "hand_number": 9,
+      "player_cards": [
+        {
+          "suit": "♣",
+          "rank": "9"
+        },
+        {
+          "suit": "♦",
+          "rank": "9"
+        }
+      ],
+      "dealer_cards": [
+        {
+          "suit": "♥",
+          "rank": "J"
+        },
+        {
+          "suit": "♥",
+          "rank": "K"
+        }
+      ],
+      "user_actions": [],
+      "optimal_actions": [],
+      "running_count": 0,
+      "true_count": 0.0,
+      "result": {
+        "outcome": "loss",
+        "player_total": 18,
+        "dealer_total": 20,
+        "payout": -1.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      "bet_amount": 1.0,
+      "timestamp": "2025-07-24T17:30:00.173331"
+    },
+    {
+      "hand_number": 10,
+      "player_cards": [
+        {
+          "suit": "♦",
+          "rank": "3"
+        },
+        {
+          "suit": "♦",
+          "rank": "8"
+        },
+        {
+          "suit": "♦",
+          "rank": "10"
+        }
+      ],
+      "dealer_cards": [
+        {
+          "suit": "♣",
+          "rank": "3"
+        },
+        {
+          "suit": "♣",
+          "rank": "A"
+        },
+        {
+          "suit": "♣",
+          "rank": "4"
+        }
+      ],
+      "user_actions": [],
+      "optimal_actions": [],
+      "running_count": 0,
+      "true_count": 0.0,
+      "result": {
+        "outcome": "win",
+        "player_total": 21,
+        "dealer_total": 18,
+        "payout": 2.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      "bet_amount": 1.0,
+      "timestamp": "2025-07-24T17:30:03.484666"
+    },
+    {
+      "hand_number": 11,
+      "player_cards": [
+        {
+          "suit": "♣",
+          "rank": "2"
+        },
+        {
+          "suit": "♣",
+          "rank": "10"
+        },
+        {
+          "suit": "♣",
+          "rank": "Q"
+        }
+      ],
+      "dealer_cards": [
+        {
+          "suit": "♣",
+          "rank": "K"
+        },
+        {
+          "suit": "♣",
+          "rank": "J"
+        }
+      ],
+      "user_actions": [],
+      "optimal_actions": [],
+      "running_count": 0,
+      "true_count": 0.0,
+      "result": {
+        "outcome": "loss",
+        "player_total": 22,
+        "dealer_total": 20,
+        "payout": -1.0,
+        "player_busted": true,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      "bet_amount": 1.0,
+      "timestamp": "2025-07-24T17:30:06.291510"
+    },
+    {
+      "hand_number": 12,
+      "player_cards": [
+        {
+          "suit": "♦",
+          "rank": "Q"
+        },
+        {
+          "suit": "♦",
+          "rank": "7"
+        }
+      ],
+      "dealer_cards": [
+        {
+          "suit": "♣",
+          "rank": "5"
+        },
+        {
+          "suit": "♥",
+          "rank": "J"
+        },
+        {
+          "suit": "♥",
+          "rank": "K"
+        }
+      ],
+      "user_actions": [],
+      "optimal_actions": [],
+      "running_count": 0,
+      "true_count": 0.0,
+      "result": {
+        "outcome": "win",
+        "player_total": 17,
+        "dealer_total": 25,
+        "payout": 1.0,
+        "player_busted": false,
+        "dealer_busted": true,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      "bet_amount": 1.0,
+      "timestamp": "2025-07-24T17:30:08.740525"
+    },
+    {
+      "hand_number": 13,
+      "player_cards": [
+        {
+          "suit": "♦",
+          "rank": "8"
+        },
+        {
+          "suit": "♠",
+          "rank": "9"
+        }
+      ],
+      "dealer_cards": [
+        {
+          "suit": "♦",
+          "rank": "K"
+        },
+        {
+          "suit": "♦",
+          "rank": "A"
+        }
+      ],
+      "user_actions": [],
+      "optimal_actions": [],
+      "running_count": 0,
+      "true_count": 0.0,
+      "result": {
+        "outcome": "loss",
+        "player_total": 17,
+        "dealer_total": 21,
+        "payout": -1.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": true
+      },
+      "bet_amount": 1.0,
+      "timestamp": "2025-07-24T17:30:10.285441"
+    },
+    {
+      "hand_number": 14,
+      "player_cards": [
+        {
+          "suit": "♠",
+          "rank": "K"
+        },
+        {
+          "suit": "♠",
+          "rank": "7"
+        }
+      ],
+      "dealer_cards": [
+        {
+          "suit": "♥",
+          "rank": "A"
+        },
+        {
+          "suit": "♦",
+          "rank": "2"
+        },
+        {
+          "suit": "♣",
+          "rank": "4"
+        },
+        {
+          "suit": "♠",
+          "rank": "8"
+        },
+        {
+          "suit": "♥",
+          "rank": "3"
+        }
+      ],
+      "user_actions": [],
+      "optimal_actions": [],
+      "running_count": 0,
+      "true_count": 0.0,
+      "result": {
+        "outcome": "loss",
+        "player_total": 17,
+        "dealer_total": 18,
+        "payout": -1.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      "bet_amount": 1.0,
+      "timestamp": "2025-07-24T17:30:13.564118"
+    },
+    {
+      "hand_number": 15,
+      "player_cards": [
+        {
+          "suit": "♥",
+          "rank": "6"
+        },
+        {
+          "suit": "♦",
+          "rank": "4"
+        },
+        {
+          "suit": "♣",
+          "rank": "K"
+        }
+      ],
+      "dealer_cards": [
+        {
+          "suit": "♠",
+          "rank": "8"
+        },
+        {
+          "suit": "♦",
+          "rank": "10"
+        }
+      ],
+      "user_actions": [],
+      "optimal_actions": [],
+      "running_count": 0,
+      "true_count": 0.0,
+      "result": {
+        "outcome": "win",
+        "player_total": 20,
+        "dealer_total": 18,
+        "payout": 1.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      "bet_amount": 1.0,
+      "timestamp": "2025-07-24T17:30:20.442232"
+    },
+    {
+      "hand_number": 16,
+      "player_cards": [
+        {
+          "suit": "♥",
+          "rank": "Q"
+        },
+        {
+          "suit": "♣",
+          "rank": "5"
+        },
+        {
+          "suit": "♦",
+          "rank": "J"
+        }
+      ],
+      "dealer_cards": [
+        {
+          "suit": "♣",
+          "rank": "9"
+        },
+        {
+          "suit": "♣",
+          "rank": "7"
+        }
+      ],
+      "user_actions": [],
+      "optimal_actions": [],
+      "running_count": 0,
+      "true_count": 0.0,
+      "result": {
+        "outcome": "loss",
+        "player_total": 25,
+        "dealer_total": 16,
+        "payout": -1.0,
+        "player_busted": true,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      "bet_amount": 1.0,
+      "timestamp": "2025-07-24T17:30:23.340527"
+    },
+    {
+      "hand_number": 17,
+      "player_cards": [
+        {
+          "suit": "♥",
+          "rank": "3"
+        },
+        {
+          "suit": "♦",
+          "rank": "Q"
+        },
+        {
+          "suit": "♠",
+          "rank": "7"
+        }
+      ],
+      "dealer_cards": [
+        {
+          "suit": "♣",
+          "rank": "8"
+        },
+        {
+          "suit": "♥",
+          "rank": "6"
+        },
+        {
+          "suit": "♥",
+          "rank": "4"
+        }
+      ],
+      "user_actions": [],
+      "optimal_actions": [],
+      "running_count": 0,
+      "true_count": 0.0,
+      "result": {
+        "outcome": "win",
+        "player_total": 20,
+        "dealer_total": 18,
+        "payout": 1.0,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": false,
+        "dealer_blackjack": false
+      },
+      "bet_amount": 1.0,
+      "timestamp": "2025-07-24T17:30:27.540470"
+    },
+    {
+      "hand_number": 18,
+      "player_cards": [
+        {
+          "suit": "♦",
+          "rank": "Q"
+        },
+        {
+          "suit": "♦",
+          "rank": "A"
+        }
+      ],
+      "dealer_cards": [
+        {
+          "suit": "♦",
+          "rank": "A"
+        },
+        {
+          "suit": "♠",
+          "rank": "2"
+        }
+      ],
+      "user_actions": [],
+      "optimal_actions": [],
+      "running_count": 0,
+      "true_count": 0.0,
+      "result": {
+        "outcome": "blackjack",
+        "player_total": 21,
+        "dealer_total": 13,
+        "payout": 1.5,
+        "player_busted": false,
+        "dealer_busted": false,
+        "player_blackjack": true,
+        "dealer_blackjack": false
+      },
+      "bet_amount": 1.0,
+      "timestamp": "2025-07-24T17:30:30.062532"
+    }
+  ],
+  "counting_system": "None"
+}
