@@ -2,6 +2,8 @@
 
 from dataclasses import dataclass
 from typing import Optional
+from ..utils.exceptions import InvalidConfigurationError
+from ..utils.validation import validate_deck_count, validate_penetration, validate_blackjack_payout
 
 
 @dataclass
@@ -24,14 +26,12 @@ class GameRules:
     
     def __post_init__(self):
         """Validate game rules after initialization."""
-        if self.num_decks not in [1, 2, 4, 6, 8]:
-            raise ValueError("Number of decks must be 1, 2, 4, 6, or 8")
-        
-        if not 0.1 <= self.penetration <= 0.9:
-            raise ValueError("Penetration must be between 0.1 and 0.9")
-        
-        if self.blackjack_payout <= 0:
-            raise ValueError("Blackjack payout must be positive")
+        try:
+            self.num_decks = validate_deck_count(self.num_decks)
+            self.penetration = validate_penetration(self.penetration)
+            self.blackjack_payout = validate_blackjack_payout(self.blackjack_payout)
+        except Exception as e:
+            raise InvalidConfigurationError(f"Invalid game rules: {e}")
     
     def total_cards(self) -> int:
         """Get total number of cards in the shoe."""

@@ -3,6 +3,8 @@
 import random
 from typing import List, Optional
 from .card import Card, Suit, Rank
+from ..utils.exceptions import InvalidConfigurationError, GameLogicError
+from ..utils.validation import validate_deck_count, validate_penetration
 
 
 class Shoe:
@@ -17,13 +19,13 @@ class Shoe:
             shuffle_on_init: Whether to shuffle the shoe on initialization
             
         Raises:
-            ValueError: If num_decks or penetration are invalid
+            InvalidConfigurationError: If num_decks or penetration are invalid
         """
-        if num_decks not in [1, 2, 4, 6, 8]:
-            raise ValueError(f"Invalid number of decks: {num_decks}. Must be 1, 2, 4, 6, or 8.")
-        
-        if not 0.1 <= penetration <= 0.95:
-            raise ValueError(f"Invalid penetration: {penetration}. Must be between 0.1 and 0.95.")
+        try:
+            self.num_decks = validate_deck_count(num_decks)
+            self.penetration = validate_penetration(penetration)
+        except Exception as e:
+            raise InvalidConfigurationError(f"Invalid shoe configuration: {e}")
         
         self.num_decks = num_decks
         self.penetration = penetration
@@ -59,13 +61,13 @@ class Shoe:
             The next card from the shoe
             
         Raises:
-            RuntimeError: If the shoe is empty or needs shuffling
+            GameLogicError: If the shoe is empty or needs shuffling
         """
         if self.needs_shuffle():
-            raise RuntimeError("Shoe needs shuffling - penetration threshold reached")
+            raise GameLogicError("Shoe needs shuffling - penetration threshold reached")
         
         if not self.cards:
-            raise RuntimeError("Shoe is empty - no cards to deal")
+            raise GameLogicError("Shoe is empty - no cards to deal")
         
         card = self.cards.pop(0)
         self.cards_dealt += 1

@@ -7,6 +7,14 @@ from src.game import BlackjackGame
 from src.models import GameRules, Action, Outcome
 from src.session import SessionManager, SessionData, SessionMetadata, HandRecord
 from src.analytics import SessionStats
+from src.utils.exceptions import (
+    BlackjackSimulatorError, 
+    InvalidInputError, 
+    InvalidGameStateError,
+    SessionNotFoundError
+)
+from src.utils.validation import validate_choice_input, validate_yes_no_input
+from src.utils.error_recovery import handle_user_input_error, ErrorRecoveryContext
 
 
 class GameCLI:
@@ -50,9 +58,15 @@ class GameCLI:
     def start(self) -> None:
         """Start the interactive CLI session with automatic session creation."""
         self.running = True
-        self._create_session()
-        self._print_welcome()
-        self._new_hand()
+        
+        with ErrorRecoveryContext("starting CLI session", reraise=False) as ctx:
+            self._create_session()
+            self._print_welcome()
+            self._new_hand()
+        
+        if ctx.error:
+            print(ctx.get_user_message())
+            return
         
         while self.running:
             try:
@@ -62,8 +76,10 @@ class GameCLI:
                 self._auto_save_session()
                 print("Goodbye!")
                 break
+            except BlackjackSimulatorError as e:
+                print(handle_user_input_error(e, "Type 'help' for available commands."))
             except Exception as e:
-                print(f"Error: {e}")
+                print(f"❌ Unexpected error: {e}")
                 print("Type 'help' for available commands.")
     
     def _game_loop(self) -> None:
@@ -93,43 +109,47 @@ class GameCLI:
     
     def _hit(self) -> None:
         """Execute hit action."""
-        try:
+        with ErrorRecoveryContext("hitting", reraise=False) as ctx:
             card = self.game.player_hit()
             print(f"\nYou drew: {card}")
             
             if self.game.is_game_over():
                 print("Hand complete!")
-        except RuntimeError as e:
-            print(f"Cannot hit: {e}")
+        
+        if ctx.error:
+            print(f"❌ Cannot hit: {ctx.error}")
     
     def _stand(self) -> None:
         """Execute stand action."""
-        try:
+        with ErrorRecoveryContext("standing", reraise=False) as ctx:
             self.game.player_stand()
             print("\nYou stand. Dealer plays...")
-        except RuntimeError as e:
-            print(f"Cannot stand: {e}")
+        
+        if ctx.error:
+            print(f"❌ Cannot stand: {ctx.error}")
     
     def _double(self) -> None:
         """Execute double down action."""
-        try:
+        with ErrorRecoveryContext("doubling down", reraise=False) as ctx:
             card = self.game.player_double()
             print(f"\nYou double down and draw: {card}")
             print("Hand complete!")
-        except RuntimeError as e:
-            print(f"Cannot double: {e}")
+        
+        if ctx.error:
+            print(f"❌ Cannot double: {ctx.error}")
     
     def _split(self) -> None:
         """Execute split action (placeholder - not fully implemented in base game)."""
-        print("Split functionality not yet implemented in this version.")
+        print("❌ Split functionality not yet implemented in this version.")
     
     def _surrender(self) -> None:
         """Execute surrender action."""
-        try:
+        with ErrorRecoveryContext("surrendering", reraise=False) as ctx:
             self.game.player_surrender()
             print("\nYou surrender.")
-        except RuntimeError as e:
-            print(f"Cannot surrender: {e}")
+        
+        if ctx.error:
+            print(f"❌ Cannot surrender: {ctx.error}")
     
     def _new_hand(self) -> None:
         """Start a new hand."""
@@ -309,9 +329,13 @@ class GameCLI:
         """Start a new hand and record the previous one if completed."""
         # Record the previous hand if it was completed
         if self.game.is_game_over():
-            self._record_hand()
+            with ErrorRecoveryContext("recording hand", reraise=False) as ctx:
+                self._record_hand()
+            
+            if ctx.error:
+                print(f"⚠️ Warning: Failed to record hand: {ctx.error}")
         
-        try:
+        with ErrorRecoveryContext("starting new hand", reraise=False) as ctx:
             self.game.reset()
             self.game.deal_initial_cards()
             print("\n" + "="*50)
@@ -321,8 +345,9 @@ class GameCLI:
             # Check for immediate blackjacks
             if self.game.is_game_over():
                 print("Immediate result!")
-        except RuntimeError as e:
-            print(f"Cannot start new hand: {e}")
+        
+        if ctx.error:
+            print(f"❌ Cannot start new hand: {ctx.error}")
     
     def _auto_save_session(self) -> None:
         """Automatically save the current session."""

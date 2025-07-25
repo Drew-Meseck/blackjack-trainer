@@ -7,20 +7,16 @@ from datetime import datetime
 from pathlib import Path
 from typing import List, Optional, Dict, Any
 from .session_data import SessionData, SessionMetadata
+from ..utils.exceptions import (
+    BlackjackSimulatorError, 
+    SessionNotFoundError, 
+    SessionCorruptedError
+)
+from ..utils.error_recovery import safe_execute, log_error_with_context
 
 
-class SessionManagerError(Exception):
+class SessionManagerError(BlackjackSimulatorError):
     """Base exception for session manager errors."""
-    pass
-
-
-class SessionNotFoundError(SessionManagerError):
-    """Raised when a requested session cannot be found."""
-    pass
-
-
-class SessionCorruptedError(SessionManagerError):
-    """Raised when session data is corrupted or invalid."""
     pass
 
 

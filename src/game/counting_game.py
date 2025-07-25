@@ -77,7 +77,7 @@ class CountingBlackjackGame(BlackjackGame):
         """
         # Check if shoe needs shuffling before dealing
         if self.shoe.needs_shuffle():
-            self.shoe.shuffle()
+            self.shoe.reset()  # Reset recreates all cards and shuffles
             self._notify_shuffle()
         
         # Deal cards using parent method

@@ -8,6 +8,9 @@ from src.models import GameRules, Action, Outcome, Card
 from src.counting import CountingSystemManager, CountingSystem
 from src.session import SessionManager, SessionData, SessionMetadata, HandRecord
 from src.analytics import SessionStats
+from src.utils.exceptions import InvalidInputError, BlackjackSimulatorError
+from src.utils.validation import validate_count_estimate, validate_integer_input
+from src.utils.error_recovery import handle_user_input_error, ErrorRecoveryContext
 from .game_cli import GameCLI
 
 
@@ -90,17 +93,17 @@ class CountingCLI(GameCLI):
     def _estimate_count(self) -> None:
         """Allow user to estimate the count and get feedback."""
         if self.game.get_cards_seen() == 0:
-            print("No cards have been dealt yet. Start a hand first.")
+            print("❌ No cards have been dealt yet. Start a hand first.")
             return
         
-        try:
+        with ErrorRecoveryContext("getting count estimates", reraise=False) as ctx:
             # Get user's running count estimate
             rc_input = input("What's your running count estimate? ")
-            user_rc = int(rc_input)
+            user_rc = validate_count_estimate(rc_input)
             
             # Get user's true count estimate
             tc_input = input("What's your true count estimate? ")
-            user_tc = float(tc_input)
+            user_tc = validate_integer_input(tc_input, -50, 50, "true count estimate")
             
             # Get actual counts
             actual_rc = self.game.get_running_count()
@@ -138,11 +141,9 @@ class CountingCLI(GameCLI):
                 print("\nTip: Keep practicing! Count each card as it's revealed.")
             
             print("-"*40)
-            
-        except ValueError:
-            print("Please enter valid numbers for your count estimates.")
-        except KeyboardInterrupt:
-            print("\nCount estimation cancelled.")
+        
+        if ctx.error:
+            print(handle_user_input_error(ctx.error, "Please try again with valid numbers."))
     
     def _toggle_practice_mode(self) -> None:
         """Toggle counting practice mode on/off."""

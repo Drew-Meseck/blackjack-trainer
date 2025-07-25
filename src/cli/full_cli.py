@@ -9,6 +9,19 @@ from src.models import GameRules, Action, Outcome
 from src.counting import CountingSystemManager, CountingSystem
 from src.session import SessionManager, SessionData, SessionMetadata
 from src.analytics import SessionStats, PerformanceTracker, SessionReport
+from src.utils.exceptions import (
+    BlackjackSimulatorError, 
+    InvalidInputError, 
+    SessionNotFoundError,
+    InvalidConfigurationError
+)
+from src.utils.validation import (
+    validate_integer_input, 
+    validate_float_input, 
+    validate_menu_selection,
+    validate_yes_no_input
+)
+from src.utils.error_recovery import handle_user_input_error, ErrorRecoveryContext
 
 class ConfigurationCLI:
     """CLI for managing game configuration and session management."""
@@ -54,8 +67,10 @@ class ConfigurationCLI:
             except KeyboardInterrupt:
                 print("\nGoodbye!")
                 break
+            except BlackjackSimulatorError as e:
+                print(handle_user_input_error(e))
             except Exception as e:
-                print(f"Error: {e}")
+                print(f"❌ Unexpected error: {e}")
     
     def _show_help(self) -> None:
         """Show available commands."""
@@ -175,14 +190,16 @@ class ConfigurationCLI:
         
         while True:
             try:
-                num_decks = int(input("Number of decks (1, 2, 4, 6, 8): "))
+                deck_input = input("Number of decks (1, 2, 4, 6, 8): ")
+                num_decks = validate_integer_input(deck_input, field_name="number of decks")
+                
                 if num_decks in [1, 2, 4, 6, 8]:
                     self.current_rules.num_decks = num_decks
                     break
                 else:
                     print("Please enter 1, 2, 4, 6, or 8")
-            except ValueError:
-                print("Please enter a valid number")
+            except InvalidInputError as e:
+                print(handle_user_input_error(e))
         
         # Penetration
         print(f"Current: {self.current_rules.penetration:.1%} penetration")
